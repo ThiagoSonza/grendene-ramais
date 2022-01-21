@@ -21,14 +21,24 @@
 .item-submenu {
     width: auto;
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 25px;
+    cursor: pointer;
+    position: relative;
 }
 
-.item-submenu:hover {
-    opacity: .5;
+.item-submenu > div {
+    position: absolute;
+    background: #c3c3c3;
+    border-radius: 0 0 5px 5px;
+    top: 24px;
+    min-width: 150px;
 }
 
-.item-submenu:not(:nth-child(1))::before{
-    content: " | ";
-    margin: 10px;
+.item-submenu > div > div {
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.item-submenu > div > div:hover {
+    background: #ccc;
 }
