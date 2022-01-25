@@ -18,7 +18,13 @@ function Menu() {
         <>
             <div className="menu">
 
-                <span> Sistema Interno Sistema </span>
+                <div className="icon">
+                    <span> Sistema Interno de Segurança </span>
+                </div>
+                <div className="actions">
+                    <div> ? </div>
+                    <div> TS </div>
+                </div>
 
             </div>
 
