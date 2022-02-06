@@ -1,0 +1,16 @@
+aside {
+    width: 230px;
+    background-color: #fff;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -230px;
+    z-index: 9999;
+    box-shadow: 2px 0px 15px -7px #c3c3c3;
+}
+
+.menu-active {
+    transform: translateX(230px);
+    transition: .2s all;
+    padding: 13px;
+}

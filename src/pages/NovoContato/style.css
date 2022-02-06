@@ -1,0 +1,38 @@
+.form-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.form-wrapper .form-group {
+  padding: 10px;
+}
+
+.form-wrapper .form-group label {
+  font-size: 10px;
+}
+
+.form-wrapper .form-group input,
+.form-wrapper .form-group select {
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.btn-save {
+  background: #334f90;
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  transition: 0.4s ease-in-out;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+.btn-save:hover {
+  box-shadow: 0px 8px 10px -6px #c3c3c3;
+}
+
+@media screen and (max-width: 460px) {
+  .form-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

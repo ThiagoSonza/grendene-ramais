@@ -1,0 +1,29 @@
+.sub-title2 button,
+.custom-file-upload {
+    background: #334f90;
+    color: #fff;
+    width: 180px;
+    padding: 8px;
+    border-radius: 5px;
+    transition: 0.4s ease-in-out;
+}
+
+.sub-title2 button:hover, 
+.custom-file-upload {
+    box-shadow: 0px 8px 10px -6px #c3c3c3
+}
+
+.sub-title2 {
+  margin-top: 15px;
+  text-align: center;
+  font-size: .8rem
+}
+
+.sub-title2 .form-group {
+    display: block !important;
+    margin-bottom: 15px;
+}
+
+.sub-title2 .form-group label {
+    font-size: 10px;
+}

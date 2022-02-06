@@ -1,0 +1,25 @@
+.msg-error {
+    padding-top: 50px;
+    text-align: center;
+    height: 100vh;
+}
+
+.msg-error h1 {
+    font-size: 68px;
+}
+
+.msg-error h5 {
+    margin-bottom: 40px;
+}
+
+.msg-error button {
+    background: #f4f4f4;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: 0.4s ease-in-out;
+}
+
+.msg-error button:hover {
+    background-color: #f7f7f7;
+    box-shadow: 0px 8px 10px -6px #c3c3c3
+}

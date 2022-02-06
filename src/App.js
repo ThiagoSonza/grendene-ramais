@@ -1,21 +1,34 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useContext } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import Footer from './components/Footer';
 import Menu from './components/Menu';
-
-import Home from './pages/Home/index';
+import AppProvider, { AppContext } from './context/AppContext';
+import Routers from './router';
 
 function App() {
 
+    const { menu, footer } = useContext(AppContext)
+
     return (
-        <Router>
-            <Menu />
-            <Routes>
-                <Route path="/" element={<Home />} />
-            </Routes>
-            <Footer />
-        </Router>
+        <BrowserRouter>
+            <AppProvider>
+
+                {menu &&
+                    <Menu />
+                }
+                <Menu />
+
+                <Routers />
+
+                {footer &&
+                    <Footer />
+                }
+                <Footer />
+
+            </AppProvider>
+        </BrowserRouter>
     )
 
 }
 
-export default App;
+export default App
