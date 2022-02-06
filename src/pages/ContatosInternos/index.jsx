@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Title from "../../components/Title"
 import { VscEdit } from "react-icons/vsc";
 import { AiOutlineDelete } from "react-icons/ai";
+import Loading from '../../components/Loading';
 
 function ContatosInternos() {
 

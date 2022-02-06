@@ -25,6 +25,14 @@
   transition: 0.4s ease-in-out;
   font-size: 0.8rem;
   margin-left: 10px;
+  margin-top: 10px;
+}
+
+.wrapper {
+  box-shadow: 0 5px 1rem -2px rgba(145, 148, 153, 0.15);
+  margin-top: 15px;
+  padding: 20px 15px;
+  border-radius: 5px;
 }
 
 .btn-save:hover {

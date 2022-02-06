@@ -2,13 +2,10 @@ import "./style.css"
 import Tabs from "../../components/Tabs"
 import Title from "../../components/Title"
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
 import { VscEdit } from "react-icons/vsc";
 import { AiOutlineDelete } from "react-icons/ai";
 
 function NovoContato() {
-
-    const navigate = useNavigate()
 
     const [currentTab, setCurrentTab] = useState('geral')
     const tabs = [
@@ -20,75 +17,77 @@ function NovoContato() {
 
     return (
         <div className="content">
-
             <Title label="Novo Contato" />
 
             <Tabs tabs={tabs} currentTab={currentTab} setCurrentTab={setCurrentTab} />
 
-            <div className="form-wrapper">
-                <div className="form-group">
-                    <label htmlFor=""> Tipo de Contato: </label>
-                    <br />
-                    <select>
-                        <option value=""> Selecione... </option>
-                        <option value="1"> Clube Melissa </option>
-                        <option value="2"> Fornecedores </option>
-                        <option value="1"> Funcionário </option>
-                    </select>
-                </div>
+            <div className="wrapper">
+                <div className="form-wrapper">
+                    <div className="form-group">
+                        <label htmlFor=""> Tipo de Contato: </label>
+                        <br />
+                        <select>
+                            <option value=""> Selecione... </option>
+                            <option value="1"> Clube Melissa </option>
+                            <option value="2"> Fornecedores </option>
+                            <option value="1"> Funcionário </option>
+                        </select>
+                    </div>
 
-                <div className="form-group">
-                    <label htmlFor=""> Tipo de Contato: </label>
-                    <br />
-                    <input type="text" />
-                </div>
+                    <div className="form-group">
+                        <label htmlFor=""> Tipo de Contato: </label>
+                        <br />
+                        <input type="text" />
+                    </div>
 
-                <div className="form-group">
-                    <label htmlFor=""> Tipo de Contato: </label>
-                    <br />
-                    <input type="text" />
-                </div>
+                    <div className="form-group">
+                        <label htmlFor=""> Tipo de Contato: </label>
+                        <br />
+                        <input type="text" />
+                    </div>
 
-                <div className="form-group">
-                    <label htmlFor=""> Tipo de Contato: </label>
-                    <br />
-                    <input type="text" />
-                </div>
+                    <div className="form-group">
+                        <label htmlFor=""> Tipo de Contato: </label>
+                        <br />
+                        <input type="text" />
+                    </div>
 
-                <div className="form-group">
-                    <label htmlFor=""> Tipo de Contato: </label>
-                    <br />
-                    <input type="text" />
+                    <div className="form-group">
+                        <label htmlFor=""> Tipo de Contato: </label>
+                        <br />
+                        <input type="text" />
+                    </div>
                 </div>
+                <button className="btn-save"> Salvar </button>
             </div>
 
-            <button className="btn-save"> Salvar </button>
-
-            <div className="tb">
-                <table className="table table-auto w-full text-left text-xs">
-                    <thead>
-                        <tr>
-                            <th>Song</th>
-                            <th>Artist</th>
-                            <th>Year</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-                            <td>Malcolm Lockyer</td>
-                            <td>1961</td>
-                            <td className="col-actions"> <VscEdit/> <AiOutlineDelete/> </td>
-                        </tr>
-                        <tr>
-                            <td>Witchy Woman</td>
-                            <td>The Eagles</td>
-                            <td>1972</td>
-                            <td className="col-actions"> <VscEdit/> <AiOutlineDelete/> </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div className="wrapper">
+                <div className="tb">
+                    <table className="table table-auto w-full text-left text-xs">
+                        <thead>
+                            <tr>
+                                <th>Song</th>
+                                <th>Artist</th>
+                                <th>Year</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+                                <td>Malcolm Lockyer</td>
+                                <td>1961</td>
+                                <td className="col-actions"> <VscEdit /> <AiOutlineDelete /> </td>
+                            </tr>
+                            <tr>
+                                <td>Witchy Woman</td>
+                                <td>The Eagles</td>
+                                <td>1972</td>
+                                <td className="col-actions"> <VscEdit /> <AiOutlineDelete /> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     )

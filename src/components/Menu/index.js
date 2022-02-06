@@ -11,13 +11,14 @@ function Menu() {
     const [showSubMenu, setShowSubMenu] = useState(false)
     const [showMenu, setShowMenu] = useState(false)
     const wrapperRef = useRef(null)
+    const wrapperRefAside = useRef(null)
     const navigate = useNavigate()
 
     function handleShowItens(submenu) {
         setMenu(submenu)
     }
 
-    function mouseOut(e) {
+    function mouseOut(_e) {
         if (menu)
             setMenu('')
     }
@@ -25,6 +26,7 @@ function Menu() {
     function useOutsideMenu(ref) {
         useEffect(() => {
             function handleClickOutside(event) {
+                console.log('current->>', ref.current, 'evento->>', event.target)
                 if (ref.current && !ref.current.contains(event.target)) {
                     setShowSubMenu(false)
                 }
@@ -75,14 +77,14 @@ function Menu() {
                 </div>
             </div>
 
-            <aside className={`${showMenu ? "menu-active" : ""}`}>
+            <aside ref={wrapperRefAside} className={`${showMenu ? "menu-active" : ""}`}>
                 <MenuIcon showMenu={showMenu} setShowMenu={setShowMenu} />
                 <div className="aside-content">
-                    <Link to={'/'}> <SiMicrosoftedge/> ASG </Link>
-                    <Link to={'/'}> <SiMicrosoftedge/> SGA </Link>
-                    <Link to={'/'}> <SiMicrosoftedge/> SIS </Link>
-                    <Link to={'/'}> <SiMicrosoftedge/> SCC </Link>
-                    <Link to={'/'}> <SiMicrosoftedge/> EBTA </Link>
+                    <Link to={'/'}> <SiMicrosoftedge /> ASG </Link>
+                    <Link to={'/'}> <SiMicrosoftedge /> SGA </Link>
+                    <Link to={'/'}> <SiMicrosoftedge /> SIS </Link>
+                    <Link to={'/'}> <SiMicrosoftedge /> SCC </Link>
+                    <Link to={'/'}> <SiMicrosoftedge /> EBTA </Link>
                 </div>
             </aside>
 

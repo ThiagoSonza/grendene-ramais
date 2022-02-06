@@ -4,8 +4,8 @@ function MenuIcon({ setShowMenu, showMenu }) {
 
     return (
 
-        <div className="icon" onClick={() => setShowMenu(!showMenu)}>
-            <svg className="outside-square" viewBox="0 0 110 110" zoomAndPan="disable" preserveAspectRatio="none">
+        <div className="icon">
+            <svg className="outside-square" viewBox="0 0 110 110" zoomAndPan="disable" preserveAspectRatio="none" onClick={() => setShowMenu(!showMenu)}>
                 <path d="M0 0, L30 0, L30 30, L0 30, Z" />
                 <path d="M40 0, L70 0, L70 30, L40 30, Z" />
                 <path d="M80 0, L110 0, L110 30, L80 30, Z" />
