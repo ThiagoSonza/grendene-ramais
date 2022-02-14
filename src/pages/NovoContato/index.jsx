@@ -1,7 +1,7 @@
 import "./style.css"
 import Tabs from "../../components/Tabs"
 import Title from "../../components/Title"
-import { useState } from "react"
+import React, { useState } from "react"
 import { VscEdit } from "react-icons/vsc";
 import { AiOutlineDelete } from "react-icons/ai";
 
@@ -10,6 +10,7 @@ function NovoContato() {
     const [currentTab, setCurrentTab] = useState('geral')
     const tabs = [
         { "label": "Geral", 'name': 'geral' },
+        { "label": "Endereço", 'name': 'endereco' },
         { "label": "Ramais", 'name': 'ramais' },
         { "label": "Telefones", 'name': 'telefones' },
         { "label": "Outros", 'name': 'outros' },
@@ -28,9 +29,16 @@ function NovoContato() {
                         <br />
                         <select>
                             <option value=""> Selecione... </option>
-                            <option value="1"> Clube Melissa </option>
-                            <option value="2"> Fornecedores </option>
                             <option value="1"> Funcionário </option>
+                            <option value="1"> Interno </option>
+                            <option value="1"> Clube Melissa </option>
+                            <option value="1"> Coligadas </option>
+                            <option value="1"> VOIP </option>
+                            <option value="1"> Abreviados </option>
+                            <option value="1"> Clientes </option>
+                            <option value="1"> Representante </option>
+                            <option value="1"> Fornecedor </option>
+                            <option value="1"> Transportadora </option>
                         </select>
                     </div>
 

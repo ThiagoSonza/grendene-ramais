@@ -45,6 +45,12 @@ button:disabled {
 .content table {
   margin-top: 30px;
   font-weight: 200;
+  width: 100%;
+  font-size: .75rem;
+}
+
+.content table thead {
+  text-align: left;
 }
 
 .content table tr td {
@@ -64,20 +70,31 @@ button:disabled {
 }
 
 .content .title input {
-  background-color: #e1dfdd;
-  border-radius: 5px;
-  border: 1px solid #c4c4c4;
-  cursor: pointer;
-  padding: 5px;
+  width: 180px;
+  padding-left: 10px;
   padding-right: 30px;
-  outline: none;
-  font-weight: 200;
+  border-radius: 2px;
+  border: none;
+  border-bottom: 1px solid;
+  background-color: #EDEBE9;
+  border-bottom-color: #EDEBE9;    
+  color: #605E5C;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: .01em;
+  text-align: left;
+  font-weight: 400;
+}
+
+.content .title input:focus {
+  border-bottom-color: #334f90;
 }
 
 .content .title .search svg {
   position: absolute;
   top: 7px;
   right: 10px;
+  fill: #605E5C;
 }
 
 .content .sub-title {
@@ -90,7 +107,7 @@ button:disabled {
 .content .sub-title h1 {
   margin-right: 15px;
   cursor: pointer;
-  font-weight: 100;
+  font-weight: 200;
   white-space: nowrap;
 }
 

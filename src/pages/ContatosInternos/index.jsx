@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Title from "../../components/Title"
 import { VscEdit } from "react-icons/vsc";
 import { AiOutlineDelete } from "react-icons/ai";
-import Loading from '../../components/Loading';
+import React from "react";
 
 function ContatosInternos() {
 
@@ -20,7 +20,7 @@ function ContatosInternos() {
             </Title>
 
             <div className="tb">
-                <table className="table table-auto w-full text-left text-xs">
+                <table className="table">
                     <thead>
                         <tr>
                             <th>Song</th>

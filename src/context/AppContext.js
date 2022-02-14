@@ -10,8 +10,8 @@ function AppProvider({ children }){
     return (
         <AppContext.Provider
             value={
-                menu, setMenu,
-                footer, setFooter
+                menu,
+                footer
             }>
 
             {children}

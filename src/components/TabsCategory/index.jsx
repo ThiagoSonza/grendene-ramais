@@ -1,3 +1,4 @@
+import React from "react";
 
 function TabsCategory({ categories, categCurrent, setCategCurrent }) {
 

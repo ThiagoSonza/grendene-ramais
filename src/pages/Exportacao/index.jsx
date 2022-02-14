@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import Title from "../../components/Title"
 import "./style.css"
 
@@ -6,38 +6,38 @@ function Exportacao() {
 
     const [data, setData] = useState()
 
-    function handleFile(e) {
-        console.log(e.target.files[0])
+    // function handleFile(e) {
+    //     console.log(e.target.files[0])
 
-        const file = e.target.files[0];
-        const reader = new FileReader();
+    //     const file = e.target.files[0];
+    //     const reader = new FileReader();
 
-        reader.onload = function (e) {
-            const text = e.target.result;
-            console.log(text);
-            let result = processCSV(text) // plugged in here
-            console.log(result)
-        }
+    //     reader.onload = function (e) {
+    //         const text = e.target.result;
+    //         console.log(text);
+    //         let result = processCSV(text) // plugged in here
+    //         console.log(result)
+    //     }
 
-        reader.readAsText(file);
-    }
+    //     reader.readAsText(file);
+    // }
 
-    const processCSV = (str, delim = ';') => {
-        const headers = str.slice(0, str.indexOf('\n')).split(delim);
-        const rows = str.slice(str.indexOf('\n') + 1).split('\n');
+    // const processCSV = (str, delim = ';') => {
+    //     const headers = str.slice(0, str.indexOf('\n')).split(delim);
+    //     const rows = str.slice(str.indexOf('\n') + 1).split('\n');
 
-        const newArray = rows.map(row => {
-            const values = row.split(delim);
-            const eachObject = headers.reduce((obj, header, i) => {
-                obj[header] = values[i];
-                return obj;
-            }, {})
-            return eachObject;
-        })
+    //     const newArray = rows.map(row => {
+    //         const values = row.split(delim);
+    //         const eachObject = headers.reduce((obj, header, i) => {
+    //             obj[header] = values[i];
+    //             return obj;
+    //         }, {})
+    //         return eachObject;
+    //     })
 
-        setData(newArray)
-        return newArray
-    }
+    //     setData(newArray)
+    //     return newArray
+    // }
 
     function handleImport() {
     }

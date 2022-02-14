@@ -1,4 +1,5 @@
 import "./style.css"
+import React from "react";
 
 function Tabs({ tabs, currentTab, setCurrentTab }) {
 

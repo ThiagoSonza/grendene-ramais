@@ -4,7 +4,7 @@ import { VscEdit } from "react-icons/vsc";
 import { AiOutlineDelete } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
 import TabsCategory from '../../components/TabsCategory';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 function ContatosExternos() {
 
@@ -31,7 +31,7 @@ function ContatosExternos() {
             </div>
 
             <div className="tb">
-                <table className="table table-auto w-full text-left text-xs">
+                <table className="table">
                     <thead>
                         <tr>
                             <th>Song</th>

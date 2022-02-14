@@ -1,6 +1,6 @@
 import './style.css'
 import image from '../../assets/img/logo-grendene.svg';
-import { useState } from 'react';
+import React,{ useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
