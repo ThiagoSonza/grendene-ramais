@@ -64,7 +64,7 @@ function Importacao() {
                     )
                     :
                     (
-                        <label class="custom-file-upload">
+                        <label className="custom-file-upload">
                             <input hidden type="file" accept='.csv' onChange={handleFile} />
                             Selecionar Arquivo
                         </label>

@@ -5,16 +5,24 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
 import TabsCategory from '../../components/TabsCategory';
 import React, { useState } from 'react';
+import Spinner from "../../components/Spinner"
 
 function ContatosExternos() {
 
     const navigate = useNavigate()
+    const [isLoading, setIsLoading] = useState(false)
     const [categCurrent, setCategCurrent] = useState('cbMelissa')
     const categories = [
-        {'label': "Clube Melisssa", 'name': 'cbMelissa'},
-        {'label': "Fornecedores", 'name': 'fornecedores'},
-        {'label': "Outros", 'name': 'outros'},
+        { 'label': "Clube Melisssa", 'name': 'cbMelissa' },
+        { 'label': "Fornecedores", 'name': 'fornecedores' },
+        { 'label': "Outros", 'name': 'outros' },
     ]
+
+    function setTabCurrent(tab) {
+        setIsLoading(true)
+        setCategCurrent(tab)
+        setIsLoading(false)
+    }
 
     return (
         <div className="content">
@@ -27,37 +35,46 @@ function ContatosExternos() {
             </Title>
 
             <div className="sub-title">
-                <TabsCategory categories={categories} categCurrent={categCurrent} setCategCurrent={setCategCurrent} />
+                <TabsCategory categories={categories} categCurrent={categCurrent} setCategCurrent={setTabCurrent} />
             </div>
 
-            <div className="tb">
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th>Song</th>
-                            <th>Artist</th>
-                            <th>Year</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr onClick={() => navigate('/contatos/1')}>
-                            <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-                            <td>Malcolm Lockyer</td>
-                            <td>1961</td>
-                            <td className="col-actions"> <VscEdit/> <AiOutlineDelete/> </td>
-                        </tr>
-                        <tr onClick={() => navigate('/contatos/1')}>
-                            <td>Witchy Woman</td>
-                            <td>The Eagles</td>
-                            <td>1972</td>
-                            <td className="col-actions"> <VscEdit/> <AiOutlineDelete/> </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-        </div>
+            {isLoading ?
+                (
+                    <div className='preloader'>
+                        <Spinner />
+                    </div>
+                )
+                :
+                (
+                    <div className="tb">
+                        <table className="table">
+                            <thead>
+                                <tr>
+                                    <th>Song</th>
+                                    <th>Artist</th>
+                                    <th>Year</th>
+                                    <th></th>
+                                </tr >
+                            </thead >
+                            <tbody>
+                                <tr onClick={() => navigate('/contatos/1')}>
+                                    <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+                                    <td>Malcolm Lockyer</td>
+                                    <td>1961</td>
+                                    <td className="col-actions"> <VscEdit /> <AiOutlineDelete /> </td>
+                                </tr>
+                                <tr onClick={() => navigate('/contatos/1')}>
+                                    <td>Witchy Woman</td>
+                                    <td>The Eagles</td>
+                                    <td>1972</td>
+                                    <td className="col-actions"> <VscEdit /> <AiOutlineDelete /> </td>
+                                </tr>
+                            </tbody>
+                        </table >
+                    </div >
+                )
+            }
+        </div >
     )
 
 }

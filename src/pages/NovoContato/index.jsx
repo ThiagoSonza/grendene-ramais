@@ -6,7 +6,7 @@ import { VscEdit } from "react-icons/vsc";
 import { AiOutlineDelete } from "react-icons/ai";
 
 function NovoContato() {
-
+    
     const [currentTab, setCurrentTab] = useState('geral')
     const tabs = [
         { "label": "Geral", 'name': 'geral' },
@@ -30,7 +30,7 @@ function NovoContato() {
                         <select>
                             <option value=""> Selecione... </option>
                             <option value="1"> Funcionário </option>
-                            <option value="1"> Interno </option>
+                            <option value="2"> Interno </option>
                             <option value="1"> Clube Melissa </option>
                             <option value="1"> Coligadas </option>
                             <option value="1"> VOIP </option>

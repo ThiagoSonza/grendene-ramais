@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import Loading from './pages/Loading';
 
 const NotFound = React.lazy(() => import('./pages/NotFound'))
 const Login = React.lazy(() => import('./pages/Login'))
@@ -12,17 +13,17 @@ const Exportacao = React.lazy(() => import('./pages/Exportacao'))
 function Routers() {
 
     return (
-        <Routes>
-            <Route path="/" element={<React.Suspense fallback={<>...</>}> <ContatosInternos /> </React.Suspense>} />
-            <Route path="/login" element={<React.Suspense fallback={<>...</>}> <Login /> </React.Suspense>} />
-            <Route path='/contatosInternos' element={<React.Suspense fallback={<>...</>}> <ContatosInternos/> </React.Suspense>} />
-            <Route path='/contatosExternos' element={<React.Suspense fallback={<>...</>}> <ContatosExternos/> </React.Suspense>} />
-            <Route path='/contatos/:id' element={<React.Suspense fallback={<>...</>}> <NovoContato/> </React.Suspense>} />
-            <Route path='/novoContato' element={<React.Suspense fallback={<>...</>}> <NovoContato/> </React.Suspense>} />
-            <Route path='/importacao' element={<React.Suspense fallback={<>...</>}> <Importacao/> </React.Suspense>} />
-            <Route path='/exportacao' element={<React.Suspense fallback={<>...</>}> <Exportacao/> </React.Suspense>} />
+        <Routes>           
+            <Route path="/" element={<React.Suspense fallback={<Loading />}> <ContatosInternos /> </React.Suspense>} />
+            <Route path="/login" element={<React.Suspense fallback={<Loading />}> <Login /> </React.Suspense>} />
+            <Route path='/contatosInternos' element={<React.Suspense fallback={<Loading />}> <ContatosInternos/> </React.Suspense>} />
+            <Route path='/contatosExternos' element={<React.Suspense fallback={<Loading />}> <ContatosExternos/> </React.Suspense>} />
+            <Route path='/contatos/:id' element={<React.Suspense fallback={<Loading />}> <NovoContato/> </React.Suspense>} />
+            <Route path='/novoContato' element={<React.Suspense fallback={<Loading />}> <NovoContato/> </React.Suspense>} />
+            <Route path='/importacao' element={<React.Suspense fallback={<Loading />}> <Importacao/> </React.Suspense>} />
+            <Route path='/exportacao' element={<React.Suspense fallback={<Loading />}> <Exportacao/> </React.Suspense>} />
             
-            <Route path="*" element={<React.Suspense fallback={<>...</>}> <NotFound /> </React.Suspense>} />
+            <Route path="*" element={<React.Suspense fallback={<Loading />}> <NotFound /> </React.Suspense>} />
         </Routes>
     )
 

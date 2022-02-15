@@ -26,7 +26,6 @@ function Menu() {
     function useOutsideMenu(ref) {
         useEffect(() => {
             function handleClickOutside(event) {
-                console.log('current->>', ref.current, 'evento->>', event.target)
                 if (ref.current && !ref.current.contains(event.target)) {
                     setShowSubMenu(false)
                 }
