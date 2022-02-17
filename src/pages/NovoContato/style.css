@@ -3,16 +3,16 @@
   grid-template-columns: repeat(6, 1fr);
 }
 
-.form-wrapper .form-group {
+.wrapper .form-group {
   padding: 10px;
 }
 
-.form-wrapper .form-group label {
+.wrapper .form-group label {
   font-size: 10px;
 }
 
-.form-wrapper .form-group input,
-.form-wrapper .form-group select {
+.wrapper .form-group input,
+.wrapper .form-group select {
   width: 100%;
   font-size: 0.9rem;
 }

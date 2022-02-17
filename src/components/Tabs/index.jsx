@@ -1,7 +1,15 @@
 import "./style.css"
 import React from "react";
 
-function Tabs({ tabs, currentTab, setCurrentTab }) {
+function Tabs({ currentTab, setCurrentTab }) {
+
+    const tabs = [
+        { "label": "Geral", 'name': 'geral' },
+        { "label": "Endereço", 'name': 'endereco' },
+        { "label": "Ramais", 'name': 'ramais' },
+        { "label": "Telefones", 'name': 'telefones' },
+        { "label": "Outros", 'name': 'outros' },
+    ]
 
     return (
 
